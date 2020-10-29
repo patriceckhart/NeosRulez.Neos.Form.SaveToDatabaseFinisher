@@ -1,0 +1,19 @@
+{
+  "description": "A finisher for neos/form and neos/form-builder that saves the form in the database.",
+  "type": "neos-package",
+  "name": "neosrulez/neos-form-savetodatabasefinisher",
+  "require": {
+    "neos/neos": "*",
+    "neos/form-builder": "*"
+  },
+  "autoload": {
+    "psr-4": {
+      "NeosRulez\\Neos\\Form\\SaveToDatabaseFinisher": "Classes/"
+    }
+  },
+  "extra": {
+    "neos": {
+      "package-key": "NeosRulez.Neos.Form.SaveToDatabaseFinisher"
+    }
+  }
+}

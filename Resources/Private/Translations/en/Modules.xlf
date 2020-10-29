@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+    <file original="" product-name="NeosRulez.Neos.Form.SaveToDatabaseFinisher" source-language="en" datatype="plaintext">
+        <body>
+            <trans-unit id="module_savetodatabasefinisher_label" xml:space="preserve">
+				<source>Forms</source>
+			</trans-unit>
+            <trans-unit id="module_savetodatabasefinisher_description" xml:space="preserve">
+				<source>View sent form data</source>
+			</trans-unit>
+            <trans-unit id="module_savetodatabasefinisher_formdata_label" xml:space="preserve">
+				<source>Forms sent</source>
+			</trans-unit>
+            <trans-unit id="module_savetodatabasefinisher_formdata_description" xml:space="preserve">
+				<source>View sent form data</source>
+			</trans-unit>
+            <trans-unit id="btnlabel_backlink" xml:space="preserve">
+				<source>Back</source>
+			</trans-unit>
+            <trans-unit id="table_head_form" xml:space="preserve">
+				<source>Form</source>
+			</trans-unit>
+            <trans-unit id="table_head_created" xml:space="preserve">
+				<source>Sent</source>
+			</trans-unit>
+            <trans-unit id="no_formdata" xml:space="preserve">
+				<source>No forms have been sent.</source>
+			</trans-unit>
+        </body>
+    </file>
+</xliff>

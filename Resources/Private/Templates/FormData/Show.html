@@ -1,0 +1,21 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+<f:if condition="{data}">
+    <legend>{data.form}</legend>
+    <p style="margin-bottom:20px;"><f:format.date format="d.m.Y, H:i">{data.created}</f:format.date></p>
+    <f:if condition="{data.props}">
+        <f:for each="{data.props}" as="props">
+            <table class="neos-table">
+                <tbody>
+                <tr>
+                    <td>{props.key}</td>
+                    <td>{props.value}</td>
+                </tr>
+                </tbody>
+            </table>
+        </f:for>
+    </f:if>
+</f:if>
+<div class="neos-footer">
+    <f:link.action class="neos-button neos-button-primary" action="index">{f:translate(id: 'btnlabel_backlink', package: 'NeosRulez.Neos.Form.SaveToDatabaseFinisher', source: 'Modules')}</f:link.action>
+</div>

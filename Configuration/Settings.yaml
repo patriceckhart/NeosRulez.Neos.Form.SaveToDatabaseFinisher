@@ -1,0 +1,39 @@
+Neos:
+  Neos:
+    fusion:
+      autoInclude:
+        NeosRulez.Neos.Form.SaveToDatabaseFinisher: true
+    userInterface:
+      translation:
+        autoInclude:
+          NeosRulez.Neos.Form.SaveToDatabaseFinisher:
+            - Modules
+    modules:
+      form:
+        label: NeosRulez.Neos.Form.SaveToDatabaseFinisher:Modules:module_savetodatabasefinisher_label
+        controller: '\Neos\Neos\Controller\Module\ManagementController'
+        description: NeosRulez.Neos.Form.SaveToDatabaseFinisher:Modules:module_savetodatabasefinisher_description
+        icon: 'fas fa-envelope'
+        resource: 'Neos_Neos_Backend_Module_Management'
+        submodules:
+          formdata:
+            label: NeosRulez.Neos.Form.SaveToDatabaseFinisher:Modules:module_savetodatabasefinisher_formdata_label
+            controller: '\NeosRulez\Neos\Form\SaveToDatabaseFinisher\Controller\FormDataController'
+            description: NeosRulez.Neos.Form.SaveToDatabaseFinisher:Modules:module_savetodatabasefinisher_formdata_description
+            icon: 'fas fa-envelope-open-text'
+            actions:
+              index:
+                label: NeosRulez.Neos.Form.SaveToDatabaseFinisher:Modules:module_savetodatabasefinisher_formdata_label
+                title: NeosRulez.Neos.Form.SaveToDatabaseFinisher:Modules:module_savetodatabasefinisher_formdata_description
+  Form:
+    presets:
+      default:
+        finisherPresets:
+          'NeosRulez.Neos.Form.SaveToDatabaseFinisher:SaveToDatabaseFinisher':
+            implementationClassName: NeosRulez\Neos\Form\SaveToDatabaseFinisher\Finishers\SaveToDatabaseFinisher
+            options: { }
+      bootstrap:
+        finisherPresets:
+          'NeosRulez.Neos.Form.SaveToDatabaseFinisher:SaveToDatabaseFinisher':
+            implementationClassName: NeosRulez\Neos\Form\SaveToDatabaseFinisher\Finishers\SaveToDatabaseFinisher
+            options: {  }

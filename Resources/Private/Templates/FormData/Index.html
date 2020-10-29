@@ -1,0 +1,32 @@
+{namespace neos=Neos\Neos\ViewHelpers}
+{namespace fusion=Neos\Fusion\ViewHelpers}
+<f:if condition="{formdata}">
+    <f:then>
+        <table class="neos-table">
+            <thead>
+            <tr>
+                <td>{f:translate(id: 'table_head_form', package: 'NeosRulez.Neos.Form.SaveToDatabaseFinisher', source: 'Modules')}</td>
+                <td>{f:translate(id: 'table_head_created', package: 'NeosRulez.Neos.Form.SaveToDatabaseFinisher', source: 'Modules')}</td>
+                <td>&nbsp;</td>
+            </tr>
+            </thead>
+            <tbody>
+                <f:for each="{formdata}" as="data">
+                    <tr>
+                        <td>{data.form}</td>
+                        <td><f:format.date format="d.m.Y, H:i">{data.created}</f:format.date></td>
+                        <td class="neos-action">
+                            <div class="neos-pull-right">
+                                <f:link.action class="neos-button neos-button-primary" action="show" arguments="{data: data}"><i class="fas fa-eye"></i></f:link.action>
+                                <f:link.action class="neos-button neos-button-danger" action="delete" arguments="{data: data}"><i class="fas fa-trash"></i></f:link.action>
+                            </div>
+                        </td>
+                    </tr>
+                </f:for>
+            </tbody>
+        </table>
+    </f:then>
+    <f:else>
+        <p>{f:translate(id: 'no_formdata', package: 'NeosRulez.Neos.Form.SaveToDatabaseFinisher', source: 'Modules')}</p>
+    </f:else>
+</f:if>

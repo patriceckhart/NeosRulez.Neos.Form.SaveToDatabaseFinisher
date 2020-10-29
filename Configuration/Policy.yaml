@@ -1,0 +1,10 @@
+privilegeTargets:
+  Neos\Flow\Security\Authorization\Privilege\Method\MethodPrivilege:
+    'NeosRulez.Neos.Form.SaveToDatabaseFinisher':
+      matcher: 'method(NeosRulez\Neos\Form\SaveToDatabaseFinisher\Controller\FormDataController->.*Action())'
+roles:
+  'Neos.Neos:AbstractEditor':
+    privileges:
+      -
+        privilegeTarget: 'NeosRulez.Neos.Form.SaveToDatabaseFinisher'
+        permission: GRANT

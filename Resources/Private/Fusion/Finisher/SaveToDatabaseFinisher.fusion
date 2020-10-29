@@ -1,0 +1,6 @@
+prototype(NeosRulez.Neos.Form.SaveToDatabaseFinisher:SaveToDatabaseFinisher.Definition) < prototype(Neos.Form.Builder:Finisher.Definition) {
+    formElementType = 'NeosRulez.Neos.Form.SaveToDatabaseFinisher:SaveToDatabaseFinisher'
+    options {
+        formIdentifier = ${null}
+    }
+}

@@ -1,0 +1,18 @@
+'NeosRulez.Neos.Form.SaveToDatabaseFinisher:SaveToDatabaseFinisher':
+  superTypes:
+    'Neos.Form.Builder:AbstractFinisher': true
+  ui:
+    label: 'Save to database Finisher'
+    icon: 'fas fa-save'
+    inspector:
+      groups:
+        'finisher':
+          icon: 'fas fa-save'
+  properties:
+    formIdentifier:
+      type: string
+      ui:
+        label: 'Identifier'
+        reloadPageIfChanged: true
+        inspector:
+          group: 'finisher'
