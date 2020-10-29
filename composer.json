@@ -8,7 +8,7 @@
   },
   "autoload": {
     "psr-4": {
-      "NeosRulez\\Neos\\Form\\SaveToDatabaseFinisher": "Classes/"
+      "NeosRulez\\Neos\\Form\\SaveToDatabaseFinisher\\": "Classes/"
     }
   },
   "extra": {
