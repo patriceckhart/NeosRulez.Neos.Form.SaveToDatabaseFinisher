@@ -37,15 +37,30 @@ class SaveToDatabaseFinisher extends AbstractFinisher
      */
     protected function executeInternal()
     {
-
         $formRuntime = $this->finisherContext->getFormRuntime();
         $formValues = $formRuntime->getFormState()->getFormValues();
+
         $context = $this->contextFactory->create();
         $formData = [];
+        $unrealIdentifiers = [];
+
+        $node = $this->parseOption('node');
+        $inputs = (new FlowQuery(array($node)))->find('[instanceof Neos.Form.Builder:FormElement]')->context(array('workspaceName' => 'live'))->sort('_index', 'ASC')->filter('[label != false]')->get();
+        foreach ($inputs as $input) {
+            if($input->hasProperty('identifier')) {
+                $unrealIdentifiers[$input->getProperty('identifier')] = $input->getIdentifier();
+            }
+        }
+
         foreach ($formValues as $i => $value) {
-            $node = $context->getNodeByIdentifier($i);
+            if(array_key_exists($i, $unrealIdentifiers)) {
+                $node = $context->getNodeByIdentifier($unrealIdentifiers[$i]);
+            } else {
+                $node = $context->getNodeByIdentifier($i);
+            }
             $formData[] = ['key' => $node->getProperty('label'), 'value' => $value];
         }
+
         $json = json_encode($formData);
 
         $formIdentifier = $this->parseOption('formIdentifier');

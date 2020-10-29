@@ -2,5 +2,6 @@ prototype(NeosRulez.Neos.Form.SaveToDatabaseFinisher:SaveToDatabaseFinisher.Defi
     formElementType = 'NeosRulez.Neos.Form.SaveToDatabaseFinisher:SaveToDatabaseFinisher'
     options {
         formIdentifier = ${null}
+        node = ${node}
     }
 }
