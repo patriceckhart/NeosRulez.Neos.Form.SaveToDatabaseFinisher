@@ -4,16 +4,16 @@
     <legend>{data.form}</legend>
     <p style="margin-bottom:20px;"><f:format.date format="d.m.Y, H:i">{data.created}</f:format.date></p>
     <f:if condition="{data.props}">
-        <f:for each="{data.props}" as="props">
-            <table class="neos-table">
-                <tbody>
-                <tr>
-                    <td>{props.key}</td>
-                    <td>{props.value}</td>
-                </tr>
-                </tbody>
-            </table>
-        </f:for>
+        <table class="neos-table">
+            <tbody>
+                <f:for each="{data.props}" as="props">
+                    <tr>
+                        <td>{props.key}</td>
+                        <td>{props.value}</td>
+                    </tr>
+                </f:for>
+            </tbody>
+        </table>
     </f:if>
 </f:if>
 <div class="neos-footer">
