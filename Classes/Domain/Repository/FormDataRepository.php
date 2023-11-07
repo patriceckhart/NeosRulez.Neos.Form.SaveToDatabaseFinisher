@@ -14,4 +14,8 @@ use Neos\Flow\Persistence\Repository;
 class FormDataRepository extends Repository
 {
 
+    protected $defaultOrderings = [
+        'created' => \Neos\Flow\Persistence\QueryInterface::ORDER_DESCENDING
+    ];
+
 }
