@@ -90,6 +90,14 @@ class FormDataController extends ActionController
                         $header[] = $prop['key'];
                     }
 
+                    if (is_array($prop['value'])) {
+                        $newPropValue = '';
+                        foreach ($prop['value'] as $propValueKey => $propValue) {
+                            $newPropValue .= $propValue . ($propValueKey === (count($prop['value']) -1) ? '' : ', ');
+                        }
+                        $prop['value'] = $newPropValue;
+                    }
+
                     $column = Coordinate::stringFromColumnIndex($colIndex);
                     $formDataSheet->setCellValue($column . $rowIndex, $prop['value']);
                     $colIndex++;
