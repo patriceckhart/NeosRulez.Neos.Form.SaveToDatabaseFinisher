@@ -26,6 +26,9 @@
             <trans-unit id="no_formdata" xml:space="preserve">
 				<source>No forms have been sent.</source>
 			</trans-unit>
+			<trans-unit id="export" xml:space="preserve">
+				<source>Export</source>
+			</trans-unit>
         </body>
     </file>
 </xliff>

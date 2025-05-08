@@ -36,4 +36,4 @@ Neos:
         finisherPresets:
           'NeosRulez.Neos.Form.SaveToDatabaseFinisher:SaveToDatabaseFinisher':
             implementationClassName: NeosRulez\Neos\Form\SaveToDatabaseFinisher\Finishers\SaveToDatabaseFinisher
-            options: {  }
+            options: { }

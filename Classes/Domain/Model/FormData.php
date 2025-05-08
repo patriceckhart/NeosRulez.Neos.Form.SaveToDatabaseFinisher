@@ -22,7 +22,7 @@ class FormData
     /**
      * @return string
      */
-    public function getForm()
+    public function getForm(): string
     {
         return $this->form;
     }
@@ -31,7 +31,7 @@ class FormData
      * @param string $form
      * @return void
      */
-    public function setForm($form)
+    public function setForm(string $form): void
     {
         $this->form = $form;
     }
@@ -45,7 +45,7 @@ class FormData
     /**
      * @return string
      */
-    public function getProps()
+    public function getProps(): string
     {
         return $this->props;
     }
@@ -54,7 +54,7 @@ class FormData
      * @param string $props
      * @return void
      */
-    public function setProps($props)
+    public function setProps(string $props): void
     {
         $this->props = $props;
     }
@@ -65,14 +65,16 @@ class FormData
     protected $created;
 
 
-    public function __construct() {
+    public function __construct()
+    {
         $this->created = new \DateTime();
     }
 
     /**
-     * @return string
+     * @return \DateTime
      */
-    public function getCreated() {
+    public function getCreated(): \DateTime
+    {
         return $this->created;
     }
 

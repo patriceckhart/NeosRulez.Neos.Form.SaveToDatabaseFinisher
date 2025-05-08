@@ -25,6 +25,9 @@
                 </f:for>
             </tbody>
         </table>
+        <div class="neos-footer">
+            <f:link.action class="neos-button neos-button-primary" action="export">{f:translate(id: 'export', package: 'NeosRulez.Neos.Form.SaveToDatabaseFinisher', source: 'Modules')}</f:link.action>
+        </div>
     </f:then>
     <f:else>
         <p>{f:translate(id: 'no_formdata', package: 'NeosRulez.Neos.Form.SaveToDatabaseFinisher', source: 'Modules')}</p>

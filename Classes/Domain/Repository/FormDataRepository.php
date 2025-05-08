@@ -6,6 +6,7 @@ namespace NeosRulez\Neos\Form\SaveToDatabaseFinisher\Domain\Repository;
  */
 
 use Neos\Flow\Annotations as Flow;
+use Neos\Flow\Persistence\QueryInterface;
 use Neos\Flow\Persistence\Repository;
 
 /**
@@ -15,7 +16,7 @@ class FormDataRepository extends Repository
 {
 
     protected $defaultOrderings = [
-        'created' => \Neos\Flow\Persistence\QueryInterface::ORDER_DESCENDING
+        'created' => QueryInterface::ORDER_DESCENDING
     ];
 
 }
