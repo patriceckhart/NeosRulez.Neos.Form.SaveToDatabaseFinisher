@@ -113,7 +113,6 @@ class FormDataController extends ActionController
 
             $colIndex = 1;
             $startHeader = false;
-            $column = false;
             foreach ($header as $headerValue) {
                 $column = Coordinate::stringFromColumnIndex($colIndex);
                 if ($colIndex === 1) {
