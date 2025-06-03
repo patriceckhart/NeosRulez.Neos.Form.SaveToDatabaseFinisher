@@ -102,9 +102,14 @@ class FormDataController extends ActionController
                     $formDataSheet->setCellValue($column . $rowIndex, $prop['value']);
                     $colIndex++;
                 }
+
+                $column = Coordinate::stringFromColumnIndex($colIndex);
+                $formDataSheet->setCellValue($column . $rowIndex, $children->getCreated());
+
                 $rowIndex++;
             }
             $header = array_values($header);
+            $header[] = 'Gesendet';
 
             $colIndex = 1;
             $startHeader = false;
